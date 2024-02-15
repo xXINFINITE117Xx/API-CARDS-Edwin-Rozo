@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitle {
+    text-align: center;
+    padding: 1rem;
+    color: aqua;
+}
+
+header {
+    width: 50%;
+    height: 50%;
+}
+
+main {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.container > img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 2%;
+    border: 5px solid;
+    box-shadow: rgb(66, 62, 62) 5px 5px 5px;
+}
+
+.container > p {
+    text-align: center;
+    padding: 1rem;
+    color: springgreen;
+}
+
+#btn-get-api {
+    margin-left: 14.8rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+/* 
+const container = document.querySelector('main');
+const btnGetApi = document.querySelector('#btn-get-api');
+const URL = 'https://thesimpsonsquoteapi.glitch.me/quotes';
+
+let cardContainer = null;
+
+const getAPI = () => {
+    fetch(URL)
+        .then(response => response.json())
+        .then(data => data.results.forEach(character => updateCard(character)))
+        .catch(err => console.error(err));
+};
+
+const updateCard = (nameInfo) => {
+    const { image, name, quote } = nameInfo;
+
+    const newCard = document.createElement('div');
+    newCard.classList.add('container');
+
+    const imgCard = document.createElement('img');
+    imgCard.src = image;
+    imgCard.alt = name;
+
+    const nameCard = document.createElement('p');
+    nameCard.textContent = `Name: ${character}`;
+
+    const quoteCard = document.createElement('p');
+    quoteCard.textContent = `Quote: ${quote}`;
+
+    newCard.appendChild(imgCard);
+    newCard.appendChild(nameCard);
+    newCard.appendChild(quoteCard);
+
+    if (cardContainer) {
+        container.replaceChild(newCard, cardContainer);
+    } else {
+        container.appendChild(newCard);
+    }
+
+    cardContainer = newCard; 
+};
+
+btnGetApi.addEventListener('click', getAPI); */
